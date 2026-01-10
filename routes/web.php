@@ -5,7 +5,7 @@ use App\Http\Controllers\common_controller;
 use App\Http\Controllers\connect_controller;
 use App\Http\Controllers\view_controller;
 use App\Http\Controllers\page_controller;
-
+use App\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +45,9 @@ Route::get('/erasure',[page_controller::class,'erasure']);
 Route::post('/erasure',[page_controller::class,'erasure']);
 Route::get('/ajax',[page_controller::class,'ajax']);
 Route::post('/ajax',[page_controller::class,'ajax']);
+
+// Livewire
+Route::get('/counter', Counter::class);
 
 //laravel5.x用
 // Route::get('/','view_controller@index');
